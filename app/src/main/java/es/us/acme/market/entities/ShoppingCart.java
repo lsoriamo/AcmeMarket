@@ -1,5 +1,7 @@
 package es.us.acme.market.entities;
 
+import com.annimon.stream.Stream;
+
 import java.util.HashMap;
 import java.util.Map;
 

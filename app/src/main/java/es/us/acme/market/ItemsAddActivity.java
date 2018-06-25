@@ -124,6 +124,8 @@ public class ItemsAddActivity extends AppCompatActivity {
                         this.finish();
                     }).setNegativeButton(R.string.items_add_sure_exit_no, (dialog, which) -> {
             }).show();
+        }else{
+            finish();
         }
     }
 }

@@ -8,4 +8,20 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <GridView
+        android:layout_margin="10dp"
+        android:id="@+id/shortcut_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="1"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:visibility="visible" >
+
+
+    </GridView>
+
 </android.support.constraint.ConstraintLayout>

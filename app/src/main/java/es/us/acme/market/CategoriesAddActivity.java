@@ -74,6 +74,8 @@ public class CategoriesAddActivity extends AppCompatActivity {
                         this.finish();
                     }).setNegativeButton(R.string.categories_add_sure_exit_no, (dialog, which) -> {
             }).show();
+        }else{
+            finish();
         }
     }
 }

@@ -14,6 +14,12 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <LinearLayout
             android:id="@+id/shopping_cart_empty_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -39,21 +45,13 @@
 
         </LinearLayout>
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/shopping_cart_refresh_view"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/shopping_cart_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:visibility="visible">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/shopping_cart_recycler_view"
-                android:nestedScrollingEnabled="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="vertical"
-                android:visibility="visible" />
-        </android.support.v4.widget.SwipeRefreshLayout>
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

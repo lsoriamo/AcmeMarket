@@ -9,10 +9,6 @@
             android:icon="@drawable/section_categories"
             android:title="@string/section_title_categories" />
         <item
-            android:id="@+id/warehouses"
-            android:icon="@drawable/section_warehouse"
-            android:title="@string/section_title_warehouses" />
-        <item
             android:id="@+id/shopping_cart"
             android:icon="@drawable/section_cart"
             android:title="@string/section_title_shopping_cart" />

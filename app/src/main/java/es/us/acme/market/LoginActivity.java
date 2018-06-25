@@ -107,6 +107,13 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         });
 
+        if (FirebaseAuth.getInstance().getCurrentUser() != null){
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            intent.putExtra(MainActivity.EXTRA_USER_ID, FirebaseAuth.getInstance().getCurrentUser().getUid());
+            startActivity(intent);
+        }
+
     }
 
     /*  Gestión de métodos de registro y autentivación */

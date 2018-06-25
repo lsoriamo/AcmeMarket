@@ -84,6 +84,14 @@ public class FirebaseDatabaseService {
     public void saveShoppingCart(ShoppingCart shoppingCart, DatabaseReference.CompletionListener completionListener) {
         mDatabase.getReference("users/" + userId + "/cart").setValue(shoppingCart, completionListener);
     }
+
+    public void setShoppingCartItem(String itemId, Integer units, DatabaseReference.CompletionListener completionListener) {
+        mDatabase.getReference("users/" + userId + "/cart/items/" + itemId).setValue(units, completionListener);
+    }
+
+    public void removeShoppingCartItem(String itemId, DatabaseReference.CompletionListener completionListener) {
+        mDatabase.getReference("users/" + userId + "/cart/items/" + itemId).removeValue(completionListener);
+    }
     
     public void cleanShoppingCart(DatabaseReference.CompletionListener completionListener) {
         mDatabase.getReference("users/" + userId + "/cart").removeValue(completionListener);

@@ -46,7 +46,7 @@ public class LocalPreferences {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return false;
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
@@ -64,21 +64,14 @@ public class LocalPreferences {
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             return FirebaseAuth.getInstance().getCurrentUser().getUid();
         } else {
-            userLogout(false);
+            userLogout();
             return "";
         }
     }
 
-    public static void userLogout(boolean complete) {
+    public static void userLogout() {
         FirebaseAuth.getInstance().signOut();
-        if (complete) {
-            LocalPreferences.clearLocalPreferences(AcmeMarketApplication.getContext());
-        }
-        Intent intent = new Intent(AcmeMarketApplication.getContext(), LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        AcmeMarketApplication.getContext().startActivity(intent);
+        LocalPreferences.clearLocalPreferences(AcmeMarketApplication.getContext());
     }
 
     private enum LocalPreferencesValues {

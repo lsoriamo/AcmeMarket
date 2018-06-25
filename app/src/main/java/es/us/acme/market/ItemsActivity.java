@@ -142,10 +142,7 @@ public class ItemsActivity extends AppCompatActivity implements ChildEventListen
 
     @Override
     public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-        if (dataSnapshot.exists() && dataSnapshot.getValue(Item.class) != null) {
-            itemsAdapter.removeItem(dataSnapshot.getValue(Item.class));
-            itemsAdapter.addItem(dataSnapshot.getValue(Item.class));
-        }
+
     }
 
     @Override

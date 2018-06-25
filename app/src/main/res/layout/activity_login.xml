@@ -20,6 +20,11 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/acme_logo"/>
+
     <ScrollView
         android:id="@+id/login_main_layout"
         android:layout_width="match_parent"
@@ -66,18 +71,20 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/login_button_mail"
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/blue_button"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:drawableStart="@drawable/ic_mail_outline_orange_500_24dp"
                 android:textAllCaps="false"
                 android:text="@string/action_sign_in"/>
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/login_button_google"
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/red_google"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/gp"
                 android:text="@string/intro_sign_in_google"

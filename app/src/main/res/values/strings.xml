@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Acme Market</string>
+    <string name="app_name">Acme Supermarket</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Correo electrónico</string>
@@ -29,14 +29,15 @@
     <string name="login_error_email_verified_no">Cancelar</string>
     <string name="register_verification_mail_sent">Hemos enviado un correo de verificación a %1$s. Pulsa el enlace que te hemos enviado y accede de nuevo con el correo electrónico y la contraseña que introdujiste antes</string>
     <string name="register_verification_mail_error">Error al enviar el correo de verificación</string>
-    <string name="login_button_register">¿Aún no eres usuario de Acme Market? Pulsa aquí para registrarte</string>
+    <string name="login_button_register">¿Aún no eres usuario de Acme Supermarket? Pulsa aquí para registrarte</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">ACME Market</string>
+    <string name="nav_header_title">Acme Supermarket</string>
     <string name="nav_header_subtitle">Máster Ingeniería del Software</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_logout">Cerrar sesión</string>
     <string name="title_activity_categories">Categorías</string>
     <string name="section_title_categories">Explora</string>
     <string name="section_title_warehouses">Tiendas</string>
@@ -110,7 +111,39 @@
     <string name="item_shopping_cart_present_no">Añade este producto al carrito</string>
     <string name="shopping_cart_updated">Se ha actualizado el carrito</string>
     <string name="title_activity_shopping_cart">Carrito</string>
-        <string name="shopping_cart_order">Esto realizaría la compra</string>
+    <string name="shopping_cart_order">Esto realizaría la compra</string>
     <string name="shopping_cart_empty_list">¡Vaya! Aún no tienes ningún artículo en el carrito</string>
     <string name="dummy_item_units">1</string>
+    <string name="main_section_explore_title">Explora</string>
+    <string name="main_section_explore_msg">Date un paseo por nuestro catálogo de productos y añádelos al carrito de la compra</string>
+    <string name="main_section_warehouse_title">Nuestras tiendas</string>
+    <string name="main_section_warehouse_msg">Consulta algunos datos de interés sobre nuestras tiendas y almacenes</string>
+    <string name="main_section_cart_title">Carrito</string>
+    <string name="main_section_cart_msg">¿Has terminado de comprar? Puedes revisar tu carrito de la compra y hacer el pedido</string>
+    <string name="main_section_orders_title">Pedidos</string>
+    <string name="main_section_orders_msg">Consulta los pedidos que has hecho hasta el momento</string>
+    <string name="main_section_contact_msg">Toda la información que necesitas sobre nosotros la puedes encontrar aquí mismo</string>
+    <string name="main_section_contact_title">Sobre nosotros</string>
+    <string name="main_logout_title">Cerrar sesión</string>
+    <string name="main_logout_msg">¿Estás seguro de que deseas finalizar la sesión con tu usuario?</string>
+    <string name="main_logout_yes">Cerrar sesión</string>
+    <string name="main_logout_no">Cancelar</string>
+    <string name="number_picker_dialog_cancel">Cancelar</string>
+    <string name="number_picker_dialog_ok">Aceptar</string>
+    <string name="number_picker_dialog_title">Unidades</string>
+    <string name="title_activity_main_about">Acerca de</string>
+    <string name="shopping_cart_resume_total_label">Importe total</string>
+    <string name="dummy_summary_total">127,56</string>
+    <string name="dummy_summary_currency">€</string>
+    <string name="shopping_cart_summary_clear">Vaciar carrito</string>
+    <string name="shopping_cart_summary_order">Realizar compra</string>
+    <string name="shopping_cart_clear_question">¿Estás seguro de que quieres eliminar todos los artículos del carrito?</string>
+    <string name="shopping_cart_clear_question_yes">Eliminar</string>
+    <string name="shopping_cart_clear_question_no">Cancelar</string>
+    <string name="title_activity_order_map">Dirección de entrega</string>
+    <string name="order_map_no_address">No se ha podido encontrar esta dirección</string>
+    <string name="select_location_map">Selecciona la dirección de entrega pulsando en el mapa</string>
+    <string name="location_permission_retry">Reintentar</string>
+    <string name="location_permission_error">Permiso para acceder a la ubicación rechazado</string>
+    <string name="sent_here">Enviar aquí</string>
 </resources>
