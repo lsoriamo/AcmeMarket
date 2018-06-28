@@ -27,6 +27,7 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
     compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
     compile "com.google.android.gms:play-services-location:15.0.1"
     compile 'com.android.support:design:27.1.1'
     compile 'com.github.daniel-stoneuk:material-about-library:2.3.0'

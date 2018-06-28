@@ -1,5 +1,6 @@
 package es.us.acme.market;
 
+import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -15,6 +16,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -35,6 +39,9 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
     private GoogleMap mMap;
     private MapView mapView;
     private FusedLocationProviderClient mFusedLocationClient;
+    private LocationCallback mLocationCallback;
+    private boolean mRequestingLocationUpdates = true;
+    private LocationRequest mLocationRequest;
 
     private static final String MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey";
 
@@ -46,6 +53,28 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
         if (savedInstanceState != null) {
             mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY);
         }
+
+        mLocationRequest = LocationRequest.create();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(5000);
+        mLocationRequest.setFastestInterval(1000);
+
+        mLocationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                if (locationResult == null) {
+                    return;
+                }
+                for (Location location : locationResult.getLocations()) {
+                    if (location != null) {
+                        LatLng current = new LatLng(location.getLatitude(), location.getLongitude());
+                        mMap.clear();
+                        mMap.addMarker(new MarkerOptions().position(current).title(getString(R.string.sent_here)));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLng(current));
+                    }
+                }
+            }
+        };
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         mapView = findViewById(R.id.map_view);
@@ -70,6 +99,8 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
     protected void onResume() {
         super.onResume();
         mapView.onResume();
+        if (mRequestingLocationUpdates && requestLocationPermission())
+            updateMapLocation();
     }
 
     @Override
@@ -87,6 +118,7 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
     @Override
     protected void onPause() {
         mapView.onPause();
+        mFusedLocationClient.removeLocationUpdates(mLocationCallback);
         super.onPause();
     }
 
@@ -107,6 +139,7 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
         mMap = googleMap;
         mMap.setMinZoomPreference(12);
         Snackbar.make(mapView, R.string.select_location_map, Snackbar.LENGTH_INDEFINITE).show();
+
         if (requestLocationPermission()) {
             updateMapLocation();
         }
@@ -117,6 +150,7 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
                 matches = geoCoder.getFromLocation(point.latitude, point.longitude, 1);
                 Address bestMatch = (matches.isEmpty() ? null : matches.get(0));
                 if (bestMatch != null) {
+                    mRequestingLocationUpdates = false;
                     Toast.makeText(getApplicationContext(),
                             bestMatch.toString(),
                             Toast.LENGTH_SHORT).show();
@@ -131,34 +165,27 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
                 e.printStackTrace();
             }
         });
+
     }
 
     private void updateMapLocation() {
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            mFusedLocationClient.getLastLocation()
-                    .addOnSuccessListener(this, location -> {
-                        if (location != null) {
-                            LatLng current = new LatLng(location.getLatitude(), location.getLongitude());
-                            mMap.clear();
-                            mMap.addMarker(new MarkerOptions().position(current).title(getString(R.string.sent_here)));
-                            mMap.moveCamera(CameraUpdateFactory.newLatLng(current));
-                        }
-                    });
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            mFusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, null);
         }
     }
 
     private boolean requestLocationPermission() {
         if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_COARSE_LOCATION)
+                android.Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                    android.Manifest.permission.ACCESS_FINE_LOCATION)) {
                 ActivityCompat.requestPermissions(this,
-                        new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION},
+                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                         MY_PERMISSIONS_REQUEST_LOCATION);
             } else {
                 ActivityCompat.requestPermissions(this,
-                        new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION},
+                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                         MY_PERMISSIONS_REQUEST_LOCATION);
             }
             return false;
