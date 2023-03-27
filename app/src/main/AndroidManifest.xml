@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="es.us.acme.market">
+    package="es.us.lsi.acme.market">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <!--
@@ -16,7 +18,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".AcmeMarketApplication"
+        android:name="es.us.lsi.acme.market.AcmeMarketApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,7 +26,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:exported="true"
+            android:name="es.us.lsi.acme.market.LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,37 +35,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
+        <activity android:name="es.us.lsi.acme.market.RegisterActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="es.us.lsi.acme.market.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CategoriesActivity"
+            android:name="es.us.lsi.acme.market.CategoriesActivity"
             android:label="@string/title_activity_categories"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CategoriesAddActivity"
+            android:name="es.us.lsi.acme.market.CategoriesAddActivity"
             android:label="@string/title_activity_categories_add"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ItemsActivity"
+            android:name="es.us.lsi.acme.market.ItemsActivity"
             android:label="@string/title_activity_items"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ItemsAddActivity"
+            android:name="es.us.lsi.acme.market.ItemsAddActivity"
             android:label="@string/title_activity_items_add"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ItemDetailActivity"
+            android:name="es.us.lsi.acme.market.ItemDetailActivity"
             android:label="@string/title_activity_items_detail"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ShoppingCartActivity"
+            android:name="es.us.lsi.acme.market.ShoppingCartActivity"
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainAboutActivity"
+            android:name="es.us.lsi.acme.market.MainAboutActivity"
             android:label="@string/title_activity_main_about"
             android:theme="@style/AppTheme.MaterialAboutActivity" />
         <!--
@@ -78,7 +81,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".OrderMapActivity"
+            android:name="es.us.lsi.acme.market.OrderMapActivity"
             android:label="@string/title_activity_order_map"></activity>
     </application>
 

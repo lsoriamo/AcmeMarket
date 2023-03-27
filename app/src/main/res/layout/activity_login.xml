@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity">
+    tools:context="es.us.lsi.acme.market.LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -50,9 +50,9 @@
                     android:maxLines="1"
                     android:singleLine="true" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/login_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -69,9 +69,9 @@
                     android:maxLines="1"
                     android:singleLine="true" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_button_mail"
                 android:layout_width="match_parent"
                 android:backgroundTint="@color/blue_button"
@@ -81,7 +81,7 @@
                 android:textAllCaps="false"
                 android:text="@string/action_sign_in"/>
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_button_google"
                 android:layout_width="match_parent"
                 android:backgroundTint="@color/red_google"

@@ -22,7 +22,7 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:textColor="@color/colorPrimaryDark" />
 
-        <android.support.v7.widget.AppCompatRatingBar
+        <androidx.appcompat.widget.AppCompatRatingBar
             android:id="@+id/comment_rating_bar"
             style="?android:attr/ratingBarStyleIndicator"
             android:layout_width="wrap_content"

@@ -8,7 +8,7 @@
         android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".OrderMapActivity">
+        tools:context="es.us.lsi.acme.market.OrderMapActivity">
 
     </com.google.android.gms.maps.MapView>
 </LinearLayout>

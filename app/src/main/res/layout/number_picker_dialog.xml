@@ -12,7 +12,7 @@
         android:layout_marginTop="15dp" />
 
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
