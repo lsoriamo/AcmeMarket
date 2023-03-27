@@ -8,3 +8,5 @@
 /build
 /captures
 .externalNativeBuild
+/AcmeMarket.zip
+/app/src/test/java/es/us/acme/market/ExampleUnitTest.java
