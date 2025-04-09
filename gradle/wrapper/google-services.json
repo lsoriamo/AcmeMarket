@@ -1,0 +1,171 @@
+{
+  "project_info": {
+    "project_number": "342125205720",
+    "firebase_url": "https://masterits-7c27b.firebaseio.com",
+    "project_id": "masterits-7c27b",
+    "storage_bucket": "masterits-7c27b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342125205720:android:cf8ff950041fd620019fad",
+        "android_client_info": {
+          "package_name": "com.us.masterits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa-Q3m1QRZgFnlUvJCKB8oCx6xdNoKhCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342125205720-pophtei0lk0qurunru9n6tk1cki41v7v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ictus-andalucia.TicTus"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342125205720:android:a289f940e5e7c649019fad",
+        "android_client_info": {
+          "package_name": "es.us.acme.market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa-Q3m1QRZgFnlUvJCKB8oCx6xdNoKhCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342125205720-pophtei0lk0qurunru9n6tk1cki41v7v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ictus-andalucia.TicTus"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342125205720:android:8736d6a098174a5c019fad",
+        "android_client_info": {
+          "package_name": "es.us.lsi.acme.market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342125205720-jidbeie8162r3r69rlnr0h5jqiiqhhro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.us.lsi.acme.market",
+            "certificate_hash": "5eb046fbeab8a85591440312a6ac1aba2dbe45aa"
+          }
+        },
+        {
+          "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa-Q3m1QRZgFnlUvJCKB8oCx6xdNoKhCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342125205720-pophtei0lk0qurunru9n6tk1cki41v7v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ictus-andalucia.TicTus"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342125205720:android:28f3f89c8ebd9cae019fad",
+        "android_client_info": {
+          "package_name": "us.mis.acmeexplorer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342125205720-n4vp9pno701h82gc1h9brckita13mk2n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "us.mis.acmeexplorer",
+            "certificate_hash": "1602f5d471bf135267716c1f54aa61d16cffdfaf"
+          }
+        },
+        {
+          "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa-Q3m1QRZgFnlUvJCKB8oCx6xdNoKhCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342125205720-21v3scfs15ikl1lp2krg6j54p9c0bf2m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342125205720-pophtei0lk0qurunru9n6tk1cki41v7v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ictus-andalucia.TicTus"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
