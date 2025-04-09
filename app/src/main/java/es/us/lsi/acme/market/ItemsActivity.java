@@ -25,7 +25,7 @@ import es.us.lsi.acme.market.entities.Category;
 import es.us.lsi.acme.market.entities.Item;
 import es.us.lsi.acme.market.services.FirebaseDatabaseService;
 
-public class ItemsActivity extends AppCompatActivity implements ChildEventListener {
+public class ItemsActivity extends AppToolbarBaseActivity implements ChildEventListener {
 
     public static final String EXTRA_CATEGORY = "EXTRA_CATEGORY";
     private RecyclerView items_recycler_view;

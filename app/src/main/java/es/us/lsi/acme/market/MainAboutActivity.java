@@ -28,7 +28,7 @@ public class MainAboutActivity extends MaterialAboutActivity {
                 .icon(R.drawable.acme_logo)
                 .build());
 
-        int colorIcon = R.color.mal_color_icon_light_theme;
+        int colorIcon = R.color.colorAccent;
         appCardBuilder.addItem(ConvenienceBuilder.createVersionActionItem(c,
                 new IconicsDrawable(c)
                         .iconText("V")
@@ -119,6 +119,6 @@ public class MainAboutActivity extends MaterialAboutActivity {
 
     @Override
     protected CharSequence getActivityTitle() {
-        return getString(R.string.mal_title_about);
+        return getString(R.string.app_name);
     }
 }

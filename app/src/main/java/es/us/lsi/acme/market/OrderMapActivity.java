@@ -6,6 +6,8 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
 import android.os.Bundle;
@@ -31,7 +33,7 @@ import java.util.List;
 
 import es.us.lsi.acme.market.R;
 
-public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class OrderMapActivity extends AppToolbarBaseActivity implements OnMapReadyCallback {
 
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 0x142;
     private GoogleMap mMap;
@@ -78,6 +80,12 @@ public class OrderMapActivity extends AppCompatActivity implements OnMapReadyCal
         mapView = findViewById(R.id.map_view);
         mapView.onCreate(mapViewBundle);
         mapView.getMapAsync(this);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish(); // o onBackPressedDispatcher.onBackPressed();
+        return true;
     }
 
     @Override

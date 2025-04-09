@@ -20,7 +20,7 @@ import es.us.lsi.acme.market.entities.Item;
 import es.us.lsi.acme.market.entities.ShoppingCart;
 import es.us.lsi.acme.market.services.FirebaseDatabaseService;
 
-public class ShoppingCartActivity extends AppCompatActivity {
+public class ShoppingCartActivity extends AppToolbarBaseActivity {
 
     private RecyclerView shopping_cart_recycler_view;
     private LinearLayout shopping_cart_empty_layout;

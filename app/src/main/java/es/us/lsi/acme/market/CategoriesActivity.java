@@ -3,10 +3,13 @@ package es.us.lsi.acme.market;
 import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -29,7 +32,7 @@ import es.us.lsi.acme.market.R;
 import es.us.lsi.acme.market.entities.Category;
 import es.us.lsi.acme.market.services.FirebaseDatabaseService;
 
-public class CategoriesActivity extends AppCompatActivity implements ChildEventListener {
+public class CategoriesActivity extends AppToolbarBaseActivity implements ChildEventListener {
 
     private CategoriesGridAdapter adapter;
     private GridView categories_gridview;
@@ -39,8 +42,6 @@ public class CategoriesActivity extends AppCompatActivity implements ChildEventL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.category_add);
         fab.setOnClickListener(view -> startActivity(new Intent(this, CategoriesAddActivity.class)));

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import es.us.lsi.acme.market.R;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppToolbarBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

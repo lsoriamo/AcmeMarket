@@ -13,7 +13,7 @@ import es.us.lsi.acme.market.R;
 import es.us.lsi.acme.market.entities.Category;
 import es.us.lsi.acme.market.services.FirebaseDatabaseService;
 
-public class CategoriesAddActivity extends AppCompatActivity {
+public class CategoriesAddActivity extends AppToolbarBaseActivity {
     EditText categories_add_name_et;
     EditText categories_add_description_et;
     EditText categories_add_picture_et;

@@ -33,7 +33,7 @@ import es.us.lsi.acme.market.entities.ShoppingCart;
 import es.us.lsi.acme.market.services.FirebaseDatabaseService;
 import es.us.lsi.acme.market.services.LocalPreferences;
 
-public class ItemDetailActivity extends AppCompatActivity {
+public class ItemDetailActivity extends AppToolbarBaseActivity {
 
     public static final String EXTRA_ITEM_SKU = "EXTRA_ITEM_SKU";
     public static final String EXTRA_ITEM_CATEGORY_NAME = "EXTRA_ITEM_CATEGORY_NAME";

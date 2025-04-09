@@ -20,7 +20,7 @@ import es.us.lsi.acme.market.entities.Category;
 import es.us.lsi.acme.market.entities.Item;
 import es.us.lsi.acme.market.services.FirebaseDatabaseService;
 
-public class ItemsAddActivity extends AppCompatActivity {
+public class ItemsAddActivity extends AppToolbarBaseActivity {
 
     private EditText items_add_name_et;
     private EditText items_add_description_et;

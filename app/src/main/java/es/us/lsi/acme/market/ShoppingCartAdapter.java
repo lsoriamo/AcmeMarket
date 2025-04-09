@@ -1,5 +1,6 @@
 package es.us.lsi.acme.market;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 
@@ -47,6 +48,7 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
 
+    @SuppressLint("NotifyDataSetChanged")
     public void addItem(Item item, Integer units) {
         dataset.put(item, units);
         if (units <= 0) {
@@ -66,6 +68,7 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         });
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void removeItem(Item item) {
         if (dataset.containsKey(item)) {
             dataset.put(item, dataset.get(item) - 1);
@@ -81,6 +84,7 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void clearItems() {
         dataset.clear();
         shoppingCart.getItems().clear();
